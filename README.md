@@ -22,7 +22,10 @@ A modern, highly responsive, and premium gaming e-commerce front-end interface f
 - **Typography & Icons:** FontAwesome v6.4 & Google Fonts (Outfit Pack)
 
 ## 📸 Screenshots
-![Main Interface](Screenshot%202026-06-24%20042513.png)
-![Cart View](Screenshot%202026-06-24%20042542.png)
-![Checkout Simulation](Screenshot%202026-06-24%20042602.png)
-
+![Image 1](Screenshot%202026-06-24%20042513.png)
+![Image 2](Screenshot%202026-06-24%20042542.png)
+![Image 3](Screenshot%202026-06-24%20042602.png)
+![Image 4](Screenshot%202026-06-24%20042651.png)
+![Image 5](Screenshot%202026-06-24%20042716.png)
+![Image 6](Screenshot%202026-06-24%20042750.png)
+![Image 7](Screenshot%202026-06-24%20042815.png)
