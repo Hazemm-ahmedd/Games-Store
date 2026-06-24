@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault Premier Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fa-solid fa-dice-d20"></i> Game<span>Vault</span>
+        </div>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="store-search" placeholder="Search games, bundles, DLCs...">
+        </div>
+        <div class="nav-actions">
+            <div class="cart-icon-wrapper" id="open-cart-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </div>
+            <div class="profile-pill">
+                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=100&q=80" alt="Avatar">
+                <span>Hazem</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="store-container">
+        
+        <section class="deals-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-fire-flame-curved"></i> Weeklong Offers</h2>
+                <span class="view-all">Up to -85% Off</span>
+            </div>
+            <div class="deals-grid">
+                <div class="deal-card large">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Cyberpunk" class="deal-bg">
+                    <div class="deal-overlay">
+                        <span class="tag-exclusive">Featured Offer</span>
+                        <h1>Cyberpunk 2077: Phantom Liberty</h1>
+                        <p>Get the complete spy-thriller expansion bundle now.</p>
+                        <div class="deal-pricing">
+                            <span class="discount-tag">-50%</span>
+                            <div class="price-block">
+                                <span class="old-price">$59.99</span>
+                                <span class="current-price">$29.99</span>
+                            </div>
+                            <button class="btn-store-add add-to-cart-btn" data-id="deal-1" data-title="Cyberpunk 2077 Bundle" data-price="29.99" data-img="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=200&q=80">
+                                <i class="fa-solid fa-cart-plus"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal-card mini">
+                    <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=600&q=80" alt="Elden Ring">
+                    <div class="deal-overlay mini-layout">
+                        <h3>Elden Ring: Shadow of Erdtree</h3>
+                        <div class="price-row">
+                            <span class="discount-tag">-20%</span>
+                            <span class="current-price">$31.99</span>
+                        </div>
+                        <button class="btn-mini-add add-to-cart-btn" data-id="deal-2" data-title="Elden Ring DLC" data-price="31.99" data-img="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?auto=format&fit=crop&w=200&q=80">Add</button>
+                    </div>
+                </div>
+                <div class="deal-card mini">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="RDR2">
+                    <div class="deal-overlay mini-layout">
+                        <h3>Red Dead Redemption II</h3>
+                        <div class="price-row">
+                            <span class="discount-tag">-67%</span>
+                            <span class="current-price">$19.79</span>
+                        </div>
+                        <button class="btn-mini-add add-to-cart-btn" data-id="deal-3" data-title="Red Dead Redemption II" data-price="19.79" data-img="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=200&q=80">Add</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="collections-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-layer-group"></i> Browse Collections</h2>
+            </div>
+            <div class="collections-grid">
+                <div class="collection-box co-1">
+                    <div class="co-content">
+                        <h3>Action RPGs</h3>
+                        <p>Immerse in story-rich worlds</p>
+                    </div>
+                </div>
+                <div class="collection-box co-2">
+                    <div class="co-content">
+                        <h3>Competitive FPS</h3>
+                        <p>Climb the ranked ladders</p>
+                    </div>
+                </div>
+                <div class="collection-box co-3">
+                    <div class="co-content">
+                        <h3>Simulators</h3>
+                        <p>Build and drive realistic engines</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-section">
+            <div class="section-title">
+                <h2><i class="fa-solid fa-border-all"></i> All Games Catalog</h2>
+            </div>
+            <div class="catalog-grid" id="catalog-grid-wrapper">
+                
+                <div class="store-card" data-title="grand theft auto v">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&w=500&q=80" alt="GTA V">
+                        <span class="platform-badge"><i class="fa-brands fa-windows"></i></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Grand Theft Auto V: Premium</h3>
+                        <p class="card-meta">Rockstar Games | Action</p>
+                        <div class="purchase-row">
+                            <span class="store-price">$29.99</span>
+                            <button class="btn-buy-icon add-to-cart-btn" data-id="cat-1" data-title="GTA V: Premium Edition" data-price="29.99" data-img="https://images.unsplash.com/photo-1553481187-be93c21490a9?auto=format&fit=crop&w=200&q=80"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-card" data-title="the witcher 3">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=500&q=80" alt="Witcher 3">
+                        <span class="platform-badge"><i class="fa-brands fa-windows"></i></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>The Witcher 3: Wild Hunt</h3>
+                        <p class="card-meta">CD PROJEKT RED | RPG</p>
+                        <div class="purchase-row">
+                            <span class="store-price">$39.99</span>
+                            <button class="btn-buy-icon add-to-cart-btn" data-id="cat-2" data-title="The Witcher 3: Wild Hunt" data-price="39.99" data-img="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-card" data-title="god of war ragnarok">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=500&q=80" alt="God of War">
+                        <span class="platform-badge"><i class="fa-brands fa-playstation"></i></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>God of War Ragnarök</h3>
+                        <p class="card-meta">PlayStation Studios | Story</p>
+                        <div class="purchase-row">
+                            <span class="store-price">$59.99</span>
+                            <button class="btn-buy-icon add-to-cart-btn" data-id="cat-3" data-title="God of War Ragnarök" data-price="59.99" data-img="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=200&q=80"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-card" data-title="valorant">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=500&q=80" alt="Valorant">
+                        <span class="platform-badge"><i class="fa-brands fa-windows"></i></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Valorant Points Bundle</h3>
+                        <p class="card-meta">Riot Games | FPS</p>
+                        <div class="purchase-row">
+                            <span class="store-price">$9.99</span>
+                            <button class="btn-buy-icon add-to-cart-btn" data-id="cat-4" data-title="Valorant Points Bundle" data-price="9.99" data-img="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=200&q=80"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-card" data-title="forza horizon 5">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1548685913-fe65785e3a12?auto=format&fit=crop&w=500&q=80" alt="Forza Horizon">
+                        <span class="platform-badge"><i class="fa-brands fa-xbox"></i></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Forza Horizon 5: Standard</h3>
+                        <p class="card-meta">Xbox Studios | Racing</p>
+                        <div class="purchase-row">
+                            <span class="store-price">$49.99</span>
+                            <button class="btn-buy-icon add-to-cart-btn" data-id="cat-5" data-title="Forza Horizon 5" data-price="49.99" data-img="https://images.unsplash.com/photo-1548685913-fe65785e3a12?auto=format&fit=crop&w=200&q=80"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-card" data-title="hades ii">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=500&q=80" alt="Hades II">
+                        <span class="platform-badge"><i class="fa-brands fa-windows"></i></span>
+                    </div>
+                    <div class="card-info">
+                        <h3>Hades II: Early Access</h3>
+                        <p class="card-meta">Supergiant Games | Rogue</p>
+                        <div class="purchase-row">
+                            <span class="store-price">$24.99</span>
+                            <button class="btn-buy-icon add-to-cart-btn" data-id="cat-6" data-title="Hades II: Early Access" data-price="24.99" data-img="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=200&q=80"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-basket-shopping"></i> Shopping Cart</h3>
+            <i class="fa-solid fa-xmark close-cart" id="close-cart-btn"></i>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <p class="empty-msg">Your cart is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total Amount:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn-checkout" id="checkout-btn" disabled>Proceed to Secure Checkout</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="payment-modal">
+        <div class="payment-modal">
+            <div class="modal-close-wrapper"><i class="fa-solid fa-xmark" id="close-modal-btn"></i></div>
+            <h2><i class="fa-solid fa-shield-halved"></i> Secure Mock Checkout</h2>
+            <p>Select your preferred fake payment mechanism:</p>
+            
+            <div class="payment-methods">
+                <div class="pay-method active" data-type="card">
+                    <i class="fa-solid fa-credit-card"></i> Credit Card
+                </div>
+                <div class="pay-method" data-type="paypal">
+                    <i class="fa-brands fa-paypal"></i> PayPal
+                </div>
+                <div class="pay-method" data-type="crypto">
+                    <i class="fa-brands fa-bitcoin"></i> Crypto
+                </div>
+            </div>
+
+            <form id="mock-payment-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <label>Cardholder Full Name</label>
+                    <input type="text" value="Hazem Ahmed" required>
+                </div>
+                <div class="form-group">
+                    <label>Virtual Card Number</label>
+                    <input type="text" placeholder="4242 •••• •••• 4242" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Expiry Date</label>
+                        <input type="text" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CVV Security</label>
+                        <input type="password" placeholder="•••" maxLength="3" required>
+                    </div>
+                </div>
+                <button type="button" class="btn-submit-pay" id="complete-payment-btn">Authorise Simulation Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="action-toast">Item appended to vault bag!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
